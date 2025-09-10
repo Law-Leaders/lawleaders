@@ -616,8 +616,8 @@ def ping():
     return "Webhook is live and ready to receive POSTs.", 200
 
 # Health check route
-@app.route('/healths', methods=['GET'])
-def healths():
+@app.route('/health', methods=['GET'])
+def health():
     return {
         "status": "healthy",
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -635,5 +635,3 @@ if __name__ == '__main__':
     logger.info(f"Zapier webhook URL: {ZAPIER_WEBHOOK_URL}")
 
     app.run(host=host, port=port, debug=debug)
-
-
