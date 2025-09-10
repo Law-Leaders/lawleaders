@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Your Zapier webhook endpoint
-# ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/11662046/uu00807/"
+ ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/11662046/uu00807/"
 
 def extract_practice_area(description):
     """Extract practice area from description text - EXPANDED for all legal matters"""
@@ -635,6 +635,7 @@ if __name__ == '__main__':
     logger.info(f"Zapier webhook URL: {ZAPIER_WEBHOOK_URL}")
 
     app.run(host=host, port=port, debug=debug)
+
 
 
 
